@@ -1,13 +1,10 @@
-import { getMimeType, getMimeExtension } from '../src';
+const { isOddNumber } = require('../src');
 
-describe('getMimeType method', () => {
-  it('works', () => {
-    expect(getMimeType('text')).toEqual('text/plain');
+describe('isOddNumber method', () => {
+  it('false', () => {
+    expect(isOddNumber('0')).toEqual(false);
   });
-});
-
-describe('getMimeExtension method', () => {
-  it('works', () => {
-    expect(getMimeExtension('text/plain')).toEqual('txt');
+  it('true', () => {
+    expect(isOddNumber('1')).toEqual(true);
   });
 });

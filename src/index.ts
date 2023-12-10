@@ -1,10 +1,5 @@
-// const mime = require('mime');
-import mime from 'mime';
+const isOdd = require('is-odd');
 
-export const getMimeType = (path: string) => {
-  return mime.getType(path);
-};
-
-export const getMimeExtension = (mimeType: string) => {
-  return mime.getExtension(mimeType);
+export const isOddNumber = (num: number | string) => {
+  return isOdd(num);
 };
